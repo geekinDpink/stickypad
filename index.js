@@ -17,6 +17,9 @@ function delNote(count){
 
 function saveBoard(){
 
+    window.localStorage.clear();
+
+
     for(i=0;i<noteContainer.childNodes.length;i++)
     {
         let title = noteContainer.getElementsByClassName("noteTitle")[i].value;
@@ -80,14 +83,14 @@ function createNote(myTitle, myContent)
 }
 
 searchBar.addEventListener('keyup',(e)=> {
-    let searchKey= e.target.value; //return string
+    let searchKey= e.target.value.toLowerCase(); //return string
 
     //first child id starts from 1, length start counting from 1
     for(x=1;x<=noteContainer.childNodes.length;x++)
     {
         var index = x-1;
-        var title = noteContainer.getElementsByClassName("noteTitle")[index].value; //return string, node container starts from 0
-        var content = noteContainer.getElementsByClassName("noteContent")[index].value; //return string, , node container starts from 0
+        var title = noteContainer.getElementsByClassName("noteTitle")[index].value.toLowerCase(); //return string, node container starts from 0
+        var content = noteContainer.getElementsByClassName("noteContent")[index].value.toLowerCase(); //return string, , node container starts from 0
         var myNote = document.getElementById("note"+x);
         //console.log(title);
 
