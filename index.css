@@ -1,0 +1,43 @@
+body{
+    margin:2%;
+    padding: 0;
+    color: black;
+}
+
+
+#noteContainer{
+    display: flex; /*parent container*/
+    flex-direction: row; /*horizontal*/
+    flex-wrap: wrap; /*more than one row*/
+}
+
+.note{
+    width: 200px;   
+    height: 100%;
+    margin: 20px;
+    background-color:yellow;
+}
+
+.noteTitle{
+    width: 85%;
+    height: 100%;
+    margin: 0;
+    background-color: yellow;
+    border: none;
+    resize: none;
+}
+
+.delNoteBtn{
+    width: 12%;
+    background-color: yellow;
+    border: none;
+}
+
+.noteContent{
+    width: 98%;
+    height: 100%;
+    margin: 0;
+    background-color: yellow;
+    border: none;
+    resize: none;
+}
